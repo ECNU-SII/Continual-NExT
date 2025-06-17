@@ -1,4 +1,4 @@
-![# Continual-NExT](assets/ecnu-sii.png)
+![# Continual-NExT](assets/ecnu-sii.jpg)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/ecnu-sii/Continual-NExT?style=social)](https://github.com/ecnu-sii/Continual-NExT/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ecnu-sii/Continual-NExT)](https://github.com/ecnu-sii/Continual-NExT/commits/main)
