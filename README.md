@@ -1,1 +1,1 @@
-# Continual-Next
+# Continual-NExT
