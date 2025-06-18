@@ -6,7 +6,7 @@ Starting from the trade-off prerequisite and EMA update and the plasticity and s
 
 ## Parameters
 
-- `use_cia` (bool): Whether to enable CIA during training.
+- `use_dema` (bool): Whether to enable CIA during training.
 - `base_weight` (float): The basic weight of the EMA weight (default: 0.001).
 
 ## Citation
