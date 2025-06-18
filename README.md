@@ -19,9 +19,9 @@ Accuracy is obtained with the following steps:
     We print the similarity score for each matched pair and compute the **average similarity score across all pairs**, which gives a quantitative measure of how semantically similar the assistant responses are between the replies and ground truths.
 
 In conclusion, Accuracy can be calculated as:
-$$
+$
 \text{Similarity}(A,B)=\text{cos}(v_A,v_B)=\frac{v_A·v_B}{||v_A||·||v_B||}
-$$
+$
 $v_A$: The BERT embedding vector of text A
 
 $v_B$: The BERT embedding vector of text B
