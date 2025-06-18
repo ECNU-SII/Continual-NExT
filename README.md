@@ -9,7 +9,7 @@
 
 | Method |                         Description                          |                           Citation                           |
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|  CIA   | [Large Continual Instruction Assistant](./assests/methods/cia.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
+|  CIA   | [Large Continual Instruction Assistant](./assets/methods/cia.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
 
 ## 
 
