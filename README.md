@@ -20,7 +20,7 @@ Accuracy is obtained with the following steps:
 
 In conclusion, Accuracy can be calculated as:
 
-$$\text{Similarity}(A,B)=\text{cos}(v_A,v_B)=\frac{v_A·v_B}{||v_A||·||v_B||}$$
+$$\text{Similarity}(A,B)=\text{cos}(v_A,v_B)=\frac{v_A·v_B}{∥v_A∥·∥v_B∥}$$
 
 $v_A$: The BERT embedding vector of text A
 
