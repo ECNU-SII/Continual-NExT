@@ -19,7 +19,9 @@ Accuracy is obtained with the following steps:
     We print the similarity score for each matched pair and compute the **average similarity score across all pairs**, which gives a quantitative measure of how semantically similar the assistant responses are between the replies and ground truths.
 
 In conclusion, Accuracy can be calculated as:
+
 $$\text{Similarity}(A,B)=\text{cos}(v_A,v_B)=\frac{v_A·v_B}{||v_A||·||v_B||}$$
+
 $v_A$: The BERT embedding vector of text A
 
 $v_B$: The BERT embedding vector of text B
@@ -31,17 +33,17 @@ $∥⋅∥$: L2 norm (i.e., length) of the vector
 $cos⁡(v_A,v_B)$: Cosine similarity between vectors A and B, ranging from 0 to 1
 
 **Average Accuracy (Avg.ACC)** is used for averaging the test accuracy of all datasets, which represents the comprehensive performance of continual tuning.
-$$
-\text{Average Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{T,i},
-$$
+
+$$\text{Average Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{T,i},$$
+
 **Forgetting (FOR)** is utilized to indicate the test accuracy reduction of past datasets after learning the new dataset, which denotes the stability performance.
-$$
-\text{Forgetting} = \frac{1}{T-1}\sum_{i=1}^{T-1}{A_{T,i} – \text{max}(A_{j,i})_{j \in [i,T-1]}},
-$$
+
+$$\text{Forgetting} = \frac{1}{T-1}\sum_{i=1}^{T-1}{A_{T,i} – \text{max}(A_{j,i})_{j \in [i,T-1]}},$$
+
 **New Accuracy (New.ACC)** is employed to average the test accuracy of new datasets, which refers to the plasticity performance.
-$$
-\text{New Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{i,i},
-$$
+
+$$\text{New Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{i,i},$$
+
 where $T$ is the number of datasets, $A_{T,i}$ is the accuracy of $i$-th dataset on the model trained after $T$-th dataset, $A_{j,i}$ is the accuracy of $i$-th dataset on the model trained after $j$-th dataset, and $A_{i,i}$ is the accuracy of $i$-th dataset on the model trained after $i$-th dataset.
 
 ## Acknowledgements
