@@ -5,6 +5,14 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/spaces/)
 
+## Supported Methods
+
+| Method |                         Description                          |                           Citation                           |
+| :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  CIA   | [Large Continual Instruction Assistant](./assests/methods/cia.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
+
+## 
+
 ## Evaluation Metrics
 
 Accuracy is obtained with the following steps:
