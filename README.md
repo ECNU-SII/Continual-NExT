@@ -15,11 +15,6 @@
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  CIA   | [Large Continual Instruction Assistant](./assets/methods/CIA.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
 
-
-
-
-
-
 ## Evaluation Metrics
 
 Accuracy is obtained with the following steps:
@@ -60,6 +55,9 @@ $$\text{Forgetting} = \frac{1}{T-1}\sum_{i=1}^{T-1}{A_{T,i} – \text{max}(A_{j,
 $$\text{New Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{i,i},$$
 
 where $T$ is the number of datasets, $A_{T,i}$ is the accuracy of $i$-th dataset on the model trained after $T$-th dataset, $A_{j,i}$ is the accuracy of $i$-th dataset on the model trained after $j$-th dataset, and $A_{i,i}$ is the accuracy of $i$-th dataset on the model trained after $i$-th dataset.
+
+## Experimental Results
+
 
 ## Acknowledgements
 
