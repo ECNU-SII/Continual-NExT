@@ -88,7 +88,7 @@ We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), a
 
 Additionally, we also present a case (shown in the following Figure) that illustrates the continual knowledge update of LLMs.
 
-assets/demo.jpg
+![demo](assets/demo.png)
 
 ## Acknowledgements
 
