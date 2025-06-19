@@ -58,6 +58,8 @@ where $T$ is the number of datasets, $A_{T,i}$ is the accuracy of $i$-th dataset
 
 ## Experimental Results
 
+We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), and five continual learning methods (namely Replay, LWF, EWC, GEM and CIA based on LoRA fine-tuning) on our proposed Continual-News dataset. Results are shown in the following two Tables.
+
 **Continual-News Results on InternLM2.5-7b-chat**
 
 | Method  | 2022  | 2023  | 2024  |  2025  | Avg.ACC | Forgetting | New.ACC |
@@ -83,6 +85,10 @@ where $T$ is the number of datasets, $A_{T,i}$ is the accuracy of $i$-th dataset
 |   EWC   | 66.6  | 61.96 | 73.92 |  100   |  75.62  |    32.5    |   100   |
 |   GEM   | 74.1  | 67.7  | 82.03 |  100   |  80.96  |   25.39    |   100   |
 |   CIA   | 66.92 | 62.88 | 74.62 |  100   |  76.11  |   31.86    |   100   |
+
+Additionally, we also present a case (shown in the following Figure) that illustrates the continual knowledge update of LLMs.
+
+assets/demo.jpg
 
 ## Acknowledgements
 
