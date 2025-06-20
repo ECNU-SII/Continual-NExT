@@ -46,7 +46,7 @@ In summary, our system:
 
 ### Distributed Training
 
-SWIFT originally supports distributed training by using DDP/FSDP/DeepSpeed. In our modification, we select the DeepSpeed method to implement distributed training.  The following table shows the compatibility status of each continual learning PEFT/method with various DeepSpeed ZeRO configurations.
+SWIFT originally supports distributed training by using DDP/FSDP/DeepSpeed. In our modification, we select the DeepSpeed method to implement distributed training.  The following Table shows the compatibility status of each continual learning PEFT/method with various DeepSpeed ZeRO configurations.
 
 | Method                                 | Single GPU | ZeRO-0 | ZeRO-1 | ZeRO-2 | ZeRO-3 | ZeRO-3+Offload |
 | -------------------------------------- | :--------: | :----: | :----: | :----: | :----: | :------------: |
