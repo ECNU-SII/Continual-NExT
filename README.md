@@ -7,19 +7,19 @@
 
 ## Introduction
 
-Continual-next is a continuous learning system for **Large Foundation Modals(LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, multiple models, multiple tuning paradigms, and multiple continual learning(CL) methods, and allows them to be freely combined to assist researchers in developing new methods to solve **the trade-off between stability and plasticity**.
+Continual-NExT is a continual learning benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, multiple models, multiple tuning paradigms, and multiple continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
 
-In addition to using the datasets supported by the ms-swift framework, Continual-next also supports interfaces for continuous fine-tuning of public and private datasets. In addition, we also provide a new open source dataset based on Large Language Models(LLMs) **continuous news knowledge evolution** to help everyone better understand the continuous evolution process of LLMs.
+In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets. In addition, we also provide a new open-source dataset based on Large Language Models (LLMs) **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs.
 
-In summary, our system:
+In summary, our benchmark includes the following advantages:
 
-**• Flexibility:** free combination and support for multiple model architectures, efficient fine-tuning paradigms, and anti-forgetting methods.
+**• Scalability:** Easily scales to accommodate multiple large language models (LLMs), large multimodal models (LMMs), parameter-efficient fine-tuners, and diverse datasets.
 
-**• Convenience:** plug and play with one line of code.
+**• Flexibility:** Supports the flexible combination of diverse model architectures, parameter-efficient fine-tuning paradigms, and anti-forgetting methods.
 
-**• Scalability:** can expand multiple LLMs, LMMs, Peft Tuners, and Datasets.
+**• Convenience:** Enables seamless usage with a one-command "plug-and-train" interface.
 
-**• Strong developability:** develop new anti-forgetting methods.
+**• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
 
 ## Installation
 
