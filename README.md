@@ -33,7 +33,7 @@ In summary, our system:
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  CIA   | [Large Continual Instruction Assistant](./assets/methods/CIA.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
 |  EWC   | [Elastic Weight Consolidation](./assets/methods/EWC.md) | [https://arxiv.org/abs/1612.00796](https://arxiv.org/abs/1612.00796) |
-|  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [GEM on neurips](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
+|  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [Neurips2017](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
 
 ## Evaluation Metrics
 
