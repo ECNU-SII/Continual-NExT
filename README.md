@@ -6,12 +6,19 @@
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/jingyang/Continual-News)
 
 ## Introduction
+
 Continual-next is a continuous learning system for **Large Foundation Modals(LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, multiple models, multiple tuning paradigms, and multiple continual learning(CL) methods, and allows them to be freely combined to assist researchers in developing new methods to solve **the trade-off between stability and plasticity**.
+
 In addition to using the datasets supported by the ms-swift framework, Continual-next also supports interfaces for continuous fine-tuning of public and private datasets. In addition, we also provide a new open source dataset based on Large Language Models(LLMs) **continuous news knowledge evolution** to help everyone better understand the continuous evolution process of LLMs.
+
 In summary, our system:
+
 **• Flexibility:** free combination and support for multiple model architectures, efficient fine-tuning paradigms, and anti-forgetting methods.
+
 **• Convenience:** plug and play with one line of code.
+
 **• Scalability:** can expand multiple LLMs, LMMs, Peft Tuners, and Datasets.
+
 **• Strong developability:** develop new anti-forgetting methods.
 
 ## Installation
