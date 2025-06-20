@@ -27,6 +27,13 @@ In summary, our system:
 
 ## Supported Peft Tuners
 
+| Method |                         Description                          |                           Citation                           |
+| :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  Adapter   | [Adapter Tuning](./assets/tuners/Adapter.md) | [https://arxiv.org/abs/1902.00751](https://arxiv.org/abs/1902.00751) |
+|  LoRA   | [LoRA Tuning](./assets/tuners/LoRA.md) | [https://arxiv.org/abs/2106.09685](https://arxiv.org/abs/2106.09685) |
+|  AdaLoRA   | [AdaLoRA Tuning](./assets/tuners/AdaLoRA.md) | [https://arxiv.org/abs/2303.10512](https://arxiv.org/abs/2303.10512) |
+|  MoELoRA   | [MoELoRA Tuning](./assets/tuners/MoELoRA.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2403.08350) |
+
 ## Supported Methods
 
 | Method |                         Description                          |                           Citation                           |
