@@ -42,6 +42,32 @@ In summary, our system:
 |  EWC   | [Elastic Weight Consolidation](./assets/methods/EWC.md) | [https://arxiv.org/abs/1612.00796](https://arxiv.org/abs/1612.00796) |
 |  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [Neurips2017](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
 
+## Training and Evaluation
+
+### Distributed Training
+
+SWIFT originally supports distributed training by using DDP/FSDP/DeepSpeed. In our modification, we select the DeepSpeed method to implement distributed training.  The following table shows the compatibility status of each continual learning PEFT/method with various DeepSpeed ZeRO configurations.
+
+| Method                                 | Single GPU | ZeRO-0 | ZeRO-1 | ZeRO-2 | ZeRO-3 | ZeRO-3+Offload |
+| -------------------------------------- | :--------: | :----: | :----: | :----: | :----: | :------------: |
+| LoRA Fine-Tuning                       |     ✅      |   ✅    |   ✅    |   ✅    |   ✅    |       ✅        |
+| MoELoRA (Mixture of Experts with LoRA) |     ✅      |   ✅    |   ✅    |   ✅    |   ✅    |       ✅        |
+| Experience Replay                      |     ✅      |   ✅    |   ✅    |   ✅    |   ✅    |       ✅        |
+| Learning Without Forgetting (LWF)      |     ✅      |   ✅    |   ✅    |   ✅    |   ✅    |       ✅        |
+| Elastic Weight Consolidation (EWC)     |     ✅      |   ✅    |   ✅    |   🚫    |   🚫    |       🚫        |
+| Continual Instruction Tuning (CIA)     |     ✅      |   ✅    |   🚫    |   🚫    |   🚫    |       🚫        |
+| Gradient Episodic Memory (GEM)         |     ✅      |   ✅    |   🚫    |   🚫    |   🚫    |       🚫        |
+
+**Legend**:
+
+- ✅ Compatible
+- 🚫 Not compatible
+
+**Incompatibility Reasons**:
+
+- **GEM,**  **CIA**: Requires obtaining gradient and parameters which are incompatible with ZeRO-1 and above due to the way gradients and parameters are partitioned across devices.
+- **EWC**: Requires obtaining parameters which are incompatible with ZeRO-2 and above due to the way parameters are partitioned across devices.
+
 ## Evaluation Metrics
 
 Accuracy is obtained with the following steps:
