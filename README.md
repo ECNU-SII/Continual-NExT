@@ -22,8 +22,39 @@ In summary, our benchmark includes the following advantages:
 **• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
 
 ## Installation
+To install from source:
+```shell
+git clone https://github.com/ecnu-sii/Continual-NExT.git
+cd ms-swift
+pip install -e .
+```
+
+Running Environment:
+
+|              | Range        | Recommended | Notes                                     |
+| ------------ |--------------| ----------- | ----------------------------------------- |
+| python       | >=3.9        | 3.10        |                                           |
+| cuda         |              | cuda12      | No need to install if using CPU, NPU, MPS |
+| torch        | >=2.0        |             |                                           |
+| transformers | >=4.33       | 4.51.3      |                                           |
+| modelscope   | >=1.23       |             |                                           |
+| peft | >=0.11,<0.16 | ||
+| trl | >=0.13,<0.19 | 0.18 |RLHF|
+| deepspeed    | >=0.14       | 0.14.5 / 0.16.9 | Training                                  |
+| vllm         | >=0.5.1      | 0.8.5.post1       | Inference/Deployment/Evaluation           |
+| lmdeploy     | >=0.5        | 0.8       | Inference/Deployment/Evaluation           |
+
+
+For more optional dependencies, you can refer to [here](https://github.com/modelscope/ms-swift/blob/main/requirements/install_all.sh).
 
 ## Supported Models
+
+| Model  |                         Model size	        |       Template          |       HF Model ID   |
+| :----: | :------------------------------------------: | :---------------------: |:-----------------------: |
+| [Qwen/Qwen2.5-7B](https://modelscope.cn/models/Qwen/Qwen2.5-7B)    | 7B | qwen2_5  | [Qwen/Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) |
+| [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 7B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
+| [baichuan-inc/Baichuan2-7B-Chat](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
+
 
 ## Supported Peft Tuners
 
@@ -41,6 +72,8 @@ In summary, our benchmark includes the following advantages:
 |  CIA   | [Large Continual Instruction Assistant](./assets/methods/CIA.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
 |  EWC   | [Elastic Weight Consolidation](./assets/methods/EWC.md) | [https://arxiv.org/abs/1612.00796](https://arxiv.org/abs/1612.00796) |
 |  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [NeurIPS2017](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
+| LWF | [Learning Without Forgetting](./assets/methods/LWF.md) | [https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf](https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf) |
+| Reply | [Experience Replay](./assets/methods/Reply.md) | [https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
 
 ## Training and Evaluation
 
