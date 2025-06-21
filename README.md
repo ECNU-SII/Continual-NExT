@@ -72,8 +72,8 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 |  CIA   | [Large Continual Instruction Assistant](./assets/methods/CIA.md) | [https://arxiv.org/pdf/2410.10868](https://arxiv.org/pdf/2410.10868) |
 |  EWC   | [Elastic Weight Consolidation](./assets/methods/EWC.md) | [https://arxiv.org/abs/1612.00796](https://arxiv.org/abs/1612.00796) |
 |  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [NeurIPS2017](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
-| LWF | [Learning Without Forgetting](./assets/methods/LWF.md) | [https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf](https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf) |
-| Reply | [Experience Replay](./assets/methods/Reply.md) | [https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
+| LWF | [Learning Without Forgetting](./assets/methods/LWF.md) | [TPAMI 2017](https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf) |
+| Reply | [Experience Replay](./assets/methods/Reply.md) | [NeurIPS 2019](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
 
 ## Training and Evaluation
 
