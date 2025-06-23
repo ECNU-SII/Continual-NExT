@@ -25,7 +25,7 @@ In summary, our benchmark includes the following advantages:
 To install from source:
 ```shell
 git clone https://github.com/ecnu-sii/Continual-NExT.git
-cd ms-swift
+cd Continual-NExT
 pip install -e .
 ```
 
