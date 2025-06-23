@@ -63,9 +63,9 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 |  LoRA      | [LoRA Tuning](./assets/tuners/LoRA.md) | [https://arxiv.org/abs/2106.09685](https://arxiv.org/abs/2106.09685) |
 |  AdaLoRA   | [AdaLoRA Tuning](./assets/tuners/AdaLoRA.md) | [https://arxiv.org/abs/2303.10512](https://arxiv.org/abs/2303.10512) |
 |  MoELoRA   | [MoELoRA Tuning](./assets/tuners/MoELoRA.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2403.08350) |
-|  Prompt-Tuning | [Prompt Tuning](https://github.com/ECNU-SII/Continual-NExT/edit/main/README.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2403.08350) |
-|  Prefix-Tuning | [Prefix Tuning](https://github.com/ECNU-SII/Continual-NExT/edit/main/README.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2403.08350) |
-|  P-Tuning | [P Tuning](https://github.com/ECNU-SII/Continual-NExT/edit/main/README.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2403.08350) |
+|  Prompt-Tuning | [Prompt Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md)) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2104.08691) |
+|  Prefix-Tuning | [Prefix Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2101.00190) |
+|  P-Tuning | [P Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.08350](https://arxiv.org/abs/2103.10385) |
 
 ## Supported Methods
 
