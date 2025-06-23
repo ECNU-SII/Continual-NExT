@@ -1,0 +1,3 @@
+[console_scripts]
+megatron = swift.cli._megatron.main:cli_main
+swift = swift.cli.main:cli_main
