@@ -38,7 +38,6 @@ Running Environment:
 | torch        | >=2.0        |             |                                           |
 | transformers | >=4.33       | 4.51.3      |                                           |
 | modelscope   | >=1.23       |             |                                           |
-| peft | >=0.11,<0.16 | ||
 | trl | >=0.13,<0.19 | 0.18 |RLHF|
 | deepspeed    | >=0.14       | 0.14.5 / 0.16.9 | Training                                  |
 | vllm         | >=0.5.1      | 0.8.5.post1       | Inference/Deployment/Evaluation           |
@@ -76,6 +75,27 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 | Reply | [Experience Replay](./assets/methods/Reply.md) | [NeurIPS 2019](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
 
 ## Training and Evaluation
+For training 'reply' on Internlm2.5-7b
+```shell
+sh train/internlm_train_reply.sh
+```
+
+For training 'lwf' on Qwen2.5-7b
+```shell
+sh train/qwen_train_lwf.sh
+```
+Please note that the implementation of LWF in Qwen does not support flash_attn.
+
+To calculate the performance metrics of the model results, we first need to deploy the model as a service.
+For training 'lwf' on Qwen2.5-7b
+```shell
+sh evaluation/deploy.sh
+```
+Then, obtain the responses, save them as files, and calculate the metrics.
+```python
+python evaluation/test_ans.py
+python evaluation/sim.py
+```
 
 ### Distributed Training
 
