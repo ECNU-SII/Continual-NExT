@@ -87,7 +87,6 @@ sh train/qwen_train_lwf.sh
 Please note that the implementation of LWF in Qwen does not support flash_attn.
 
 To calculate the performance metrics of the model results, we first need to deploy the model as a service.
-For training 'lwf' on Qwen2.5-7b
 ```shell
 sh evaluation/deploy.sh
 ```
