@@ -1,7 +1,7 @@
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../Qwen2.5-7b \
     --model_type 'qwen2_5' \
     --template 'qwen2_5' \
@@ -25,7 +25,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../Qwen2.5-7b \
     --model_type 'qwen2_5' \
     --template 'qwen2_5' \
@@ -50,7 +50,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../Qwen2.5-7b \
     --model_type 'qwen2_5' \
     --template 'qwen2_5' \
@@ -75,7 +75,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../Qwen2.5-7b \
     --model_type 'qwen2_5' \
     --template 'qwen2_5' \
