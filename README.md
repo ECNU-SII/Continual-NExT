@@ -95,7 +95,7 @@ sh train/qwen_train_lwf.sh
 "--model" is the model path. If the file does not exist, it will be downloaded online. For specific details, please refer to [swift](https://github.com/modelscope/ms-swift).
 
 Adapters steps calculation procedure is as follows:  
-$$\text{steps} = \left\lceil \frac{\text{num-samples}}{\text{per-device-train-batch-size} \times \text{NPROC-PER-NODE}} \right\rceil \times \text{num\_train\_epochs}$$   
+$$\text{steps} = \left\lceil \frac{\text{num-samples}}{\text{per-device-train-batch-size} \times \text{NPROC-PER-NODE}} \right\rceil \times \text{num-train-epochs}$$   
 $\lceil \cdot \rceil$ denotes rounding up to the nearest integer. Subsequently, the path is "--adapters ms-swift-main/output/{ouput_dir}/2022/{steps}".
 
 Please note that the implementation of LWF in Qwen does not support flash_attn.
