@@ -1,7 +1,7 @@
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../internlm2_5-7b-chat \
     --model_type 'internlm2' \
     --template 'internlm2' \
@@ -25,7 +25,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../internlm2_5-7b-chat \
     --model_type 'internlm2' \
     --template 'internlm2' \
@@ -50,7 +50,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../internlm2_5-7b-chat \
     --model_type 'internlm2' \
     --template 'internlm2' \
@@ -75,7 +75,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --add_version False \
-    --deepspeed zero1 \
+    --deepspeed zero0 \
     --model ../internlm2_5-7b-chat \
     --model_type 'internlm2' \
     --template 'internlm2' \
