@@ -605,6 +605,8 @@ class Seq2SeqTrainer(SwiftMixin, DataLoaderMixin, HfSeq2SeqTrainer):
 
     def compute_origin_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         from swift.plugin.loss import get_loss_func
+        if 'index' in inputs.keys():
+            inputs.pop("index")
         loss_kwargs = {}
         labels = None
         compute_loss_func = self.compute_loss_func
@@ -726,6 +728,8 @@ class Seq2SeqTrainer(SwiftMixin, DataLoaderMixin, HfSeq2SeqTrainer):
             for step, inputs in progress_bar:
                 self.model.zero_grad()
                 inputs = {k: v.to(device) for k, v in inputs.items()}  # 二次设备确认
+                if 'index' in inputs.keys():
+                    inputs.pop("index")
                 outputs = self.model(**inputs)
                 loss = outputs.loss if hasattr(outputs, 'loss') else outputs[0]
                 loss = loss.mean()
@@ -753,6 +757,8 @@ class Seq2SeqTrainer(SwiftMixin, DataLoaderMixin, HfSeq2SeqTrainer):
     
     def compute_ewc_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         from swift.plugin.loss import get_loss_func
+        if 'index' in inputs.keys():
+            inputs.pop("index")
         loss_kwargs = {}
         labels = None
         compute_loss_func = self.compute_loss_func
@@ -864,7 +870,8 @@ class Seq2SeqTrainer(SwiftMixin, DataLoaderMixin, HfSeq2SeqTrainer):
         # Handle cases where a batch might only contain current or memory samples
         has_current_samples = torch.any(current_mask)
         has_memory_samples = torch.any(memory_mask)
-
+        if 'index' in inputs.keys():
+            inputs.pop("index")
         if not has_current_samples:
             logger.warning_once(f"[RANK {rank}] Received a batch with only memory samples. Skipping GEM gradient calculation for this batch.")
             effective_loss = torch.tensor(1e-9, device=model.device, requires_grad=True) # MODIFIED DEFAULT to small epsilon
