@@ -84,22 +84,22 @@ For more details, please refer to [supported models](https://swift.readthedocs.i
   
 For training 'Reply' on Internlm2.5-7b
 ```shell
-sh train/internlm_train_reply.sh
+sh scripts/train/internlm_train_reply.sh
 ```
 
 For training 'LWF' on Qwen2.5-7b
 ```shell
-sh train/qwen_train_lwf.sh
+sh scripts/train/qwen_train_lwf.sh
 ```
 
 For training 'EWC' on Internlm2.5-7b
 ```shell
-sh train/internlm_train_ewc.sh
+sh scripts/train/internlm_train_ewc.sh
 ```
 
 For training 'GEM' on Qwen2.5-7b
 ```shell
-sh train/qwen_train_gem.sh
+sh scripts/train/qwen_train_gem.sh
 ```
 
 "--model" is the model path. If the file does not exist, it will be downloaded online. For specific details, please refer to [swift](https://github.com/modelscope/ms-swift).
