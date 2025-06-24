@@ -114,7 +114,7 @@ sh scripts/train/qwen_train_moe.sh
 
 Please notice that temporarily, LoRA and MoELoRA shares a same tuner dictionary (./peft/lora), Model (LoRAModel) and Config (LoRAConfig). The disctinction is that LoRA uses layer.py and MoELoRA utilizes lary__.py. That is to say, in the default setting, we utilize LoRA tuning paradigm. When you rename the "layer.py" with "layer_.py" and rename the "layer__.py" with "layer.py", you will adopt the MoELoRA tuning paradigm.
 
-You can change the MoELoRA exoert number in ./peft/lora/layer__.py Line69.
+You can change the MoELoRA expert number in ./peft/lora/layer__.py Line69.
 
 "--model" is the model path. If the file does not exist, it will be downloaded online. For specific details, please refer to [swift](https://github.com/modelscope/ms-swift).
 
