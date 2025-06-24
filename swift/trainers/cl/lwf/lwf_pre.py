@@ -41,8 +41,6 @@ def gather_parameters(model, params: Optional[List[torch.nn.Parameter]] = None):
 
 logger = get_logger(__name__)
 
-
-
 def process_model_inputs(inputs, use_logits_to_keep=True, is_mp=is_mp):
     """
     处理模型输入数据，包括标签筛选和logits保留逻辑
@@ -176,10 +174,6 @@ class LWF:
                 log_target=False
             ) * (self.temperature ** 2)
 
-            # Calculate original cross-entropy loss
-            valid_labels = labels[attention_mask]
-            # ce_loss = nn.functional.cross_entropy(valid_current_logits, valid_labels)
-
             # Combine losses
             # total_loss = (1 - self.alpha) * ce_loss + self.alpha * distillation_loss
             total_loss = distillation_loss
@@ -244,10 +238,6 @@ class LWF:
         elif self.is_main:
             debugprint(f"[rank {self.rank}] Cannot create progress bar because dataloader length is unknown.")
 
-
-        # 在ZeRO-3下，我们需要使用gather_parameters上下文管理器
-        # 但由于我们在循环中多次调用模型，所以在每次forward时使用上下文管理器
-
         processed_batches = 0 # Counter for processed batches
         with torch.no_grad():
             # Use iter and next to potentially get more info if dataloader hangs on first iteration
@@ -284,7 +274,6 @@ class LWF:
 
                 # Get sample ids
                 # sample_ids = batch["index"].tolist()
-                # sample_ids = batch["index"]
                 sample_ids = batch.pop("index").tolist()
                 # print(f"Batch {batch_idx} sample IDs: {sample_ids}")
 
@@ -348,7 +337,6 @@ class LWF:
 
                 debugprint(f"[rank {self.rank}] Batch {batch_idx} caching completed. Cached {num_cached_in_batch} samples.") # Add this line
 
-
                 # Increment batch counter
                 processed_batches += 1
 
@@ -375,8 +363,6 @@ class LWF:
             dist.barrier()
             debugprint(f"[rank {self.rank}] Passed barrier after precompute_logits.") # Add this line
 
-        debugprint(f"[rank {self.rank}] 预计算logits完成，缓存了 {len(self.cached_logits)} 个样本")
-        # print(self.cached_logits.keys())
 
     def get_cached_logits(self, sample_id: int, device: torch.device) -> Optional[Dict[str, torch.Tensor]]:
         """

@@ -59,12 +59,11 @@ def main(file1, file2):
 
     if sims:
         avg_sim = sum(sims) / len(sims)
-        print(f"\n平均文本相似度: {avg_sim:.4f}")
+        print(f"\nAverage similarity: {avg_sim:.4f}")
     else:
-        print("没有找到可比对的 assistant 回复。")
+        print("No comparable assistant replies were found.")
 
 if __name__ == "__main__":
-    labels = 'datasets/test_data/2024-test.json'
-    test_res = 'LLM_test/output2/2024_test_2024.json'
+    labels = 'datasets/test_data/2022-test.json'
+    test_res = 'LLM_test/output2/2025_test_2022.json'
     main(labels, test_res)
-    

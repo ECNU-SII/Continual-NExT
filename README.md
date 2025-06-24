@@ -50,10 +50,12 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 
 | Model  |                         Model size	        |       Template          |       HF Model ID   |
 | :----: | :------------------------------------------: | :---------------------: |:-----------------------: |
-| [Qwen/Qwen2.5-7B](https://modelscope.cn/models/Qwen/Qwen2.5-7B)    | 7B | qwen2_5  | [Qwen/Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) |
-| [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 7B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
-| [baichuan-inc/Baichuan2-7B-Chat](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
+| [Qwen/Qwen2.5](https://modelscope.cn/models/Qwen/Qwen2.5-7B)    | 0.5B/1.5B/3B/7B/14B/32B/72B | qwen2_5  | [Qwen/Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) |
+| [Shanghai_AI_Laboratory/internlm2_5](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 1.8B/7B/20B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
+| [baichuan-inc/Baichuan2](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B/13B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
 
+
+For more details, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
 
 ## Supported Peft Tuners
 
@@ -78,26 +80,67 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 | Reply  | [Experience Replay](./assets/methods/Reply.md) | [NeurIPS 2019](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
 
 ## Training and Evaluation
-For training 'reply' on Internlm2.5-7b
+### Training
+  
+For training 'Reply' on Internlm2.5-7b
 ```shell
 sh train/internlm_train_reply.sh
 ```
 
-For training 'lwf' on Qwen2.5-7b
+For training 'LWF' on Qwen2.5-7b
 ```shell
 sh train/qwen_train_lwf.sh
 ```
+
+"--model" is the model path. If the file does not exist, it will be downloaded online. For specific details, please refer to [swift](https://github.com/modelscope/ms-swift).
+
+Adapters steps calculation procedure is as follows:  
+$$
+\text{steps} = \left\lceil \frac{\text{num\_samples}}{\text{per\_device\_train\_batch\_size} \times \text{NPROC\_PER\_NODE}} \right\rceil \times \text{num\_train\_epochs}
+$$   
+$\lceil \cdot \rceil$ denotes rounding up to the nearest integer. Subsequently, the path is "--adapters ms-swift-main/output/{ouput_dir}/2022/{steps}".
+
 Please note that the implementation of LWF in Qwen does not support flash_attn.
 
-To calculate the performance metrics of the model results, we first need to deploy the model as a service.
+
+### Evaluation
+To calculate the performance metrics of the model results, we first need to deploy the model as a background service to ensure continuous operation. Here's a sample: Use the final model trained on 2025 data to test 2022 data:  
+
+
+#### 1. Deploy the model service in the background  
 ```shell
-sh evaluation/deploy.sh
-```
-Then, obtain the responses, save them as files, and calculate the metrics.
+# Run the deployment script in the background and redirect output to a log file
+nohup sh evaluation/deploy.sh &> deployment.log &
+# Check the process status (replace <PID> with the actual process ID if needed)
+ps -ef | grep deploy.sh
+```  
+
+- **Infer_backend configuration**:  
+  The `--infer_backend` can be set to `pt` or `vllm`. For detailed instructions, refer to [swift](https://github.com/modelscope/ms-swift).  
+  **Note**: MoELoRA does not support `vllm` during deployment—use `pt` instead.  
+
+
+#### 2. Execute subsequent scripts in a new terminal  
+After deploying the service, open a new terminal window to proceed with generating responses and calculating metrics:  
+
 ```python
+# Generate model responses and save to files
 python evaluation/test_ans.py
+# Calculate performance metrics (e.g., similarity scores)
 python evaluation/sim.py
-```
+```  
+
+
+#### 3. Key considerations  
+- **Background service management**:  
+  - To stop the service, find the process ID with `ps -ef | grep deploy.sh` and use `kill <PID>`.  
+  - Logs are stored in `deployment.log` for troubleshooting.  
+
+- **Path modifications**:  
+  Ensure to update the corresponding files and model paths in `deploy.sh`, `test_ans.py`, and `sim.py` to match your environment.  
+
+
+This approach allows the service to run continuously in the background while you execute evaluation scripts in a separate terminal, ensuring non-blocking workflow execution.
 
 ### Distributed Training
 

@@ -59,12 +59,12 @@ class LLMTesterAndSorter:
 
 
     def run(self):
-        ori_path = 'datasets/test_data/'  # labels
+        ori_path = 'datasets/test_data/'  # labels path
         ori_file_name = f'{self.year}-test.json'
         with open(ori_path + ori_file_name, 'r', encoding='utf-8') as file:
             datasets_ori = json.load(file)
             
-        base_save_path = '/LLM_test/output_qwen2_5_lwf2/'  # 存储回答的路径
+        base_save_path = '/LLM_test/output_qwen2_5_lwf2/'  # save the answer json files
         os.makedirs(base_save_path, exist_ok=True)
         save_name = f'{self.model_year}_test_{self.year}.json'
         save_path = base_save_path + save_name
@@ -73,7 +73,7 @@ class LLMTesterAndSorter:
         reordered_results = self.reorder_results(datasets_ori, test_results)
         with open(save_path, 'w', encoding='utf-8') as file:
             json.dump(reordered_results, file, indent=4, ensure_ascii=False)
-        print("重排序后的结果已保存:", save_path)
+        print("The reordered result has been saved:", save_path)
 
 if __name__ == "__main__":
     t1 = time.time()
