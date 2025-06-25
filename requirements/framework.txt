@@ -37,3 +37,4 @@ transformers_stream_generator
 trl>=0.15,<0.20
 uvicorn
 zstandard
+deepspeed
