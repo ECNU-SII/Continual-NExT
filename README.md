@@ -86,6 +86,7 @@ For more details, please refer to [supported models](https://swift.readthedocs.i
 
 ## Training and Evaluation
 ### Training
+Notice: When opening a new terminal, please execute the following command:
 ```shell
 export PYTHONPATH=$PYTHONPATH:peft
 ```
