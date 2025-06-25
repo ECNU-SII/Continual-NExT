@@ -22,9 +22,14 @@ In summary, our benchmark includes the following advantages:
 **• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
 
 ## Installation
+```shell
+conda create -n continual python==3.10
+conda activate continual
+```
+
 To install from source:
 ```shell
-git clone https://github.com/ecnu-sii/Continual-NExT.git
+git clone https://github.com/ECNU-SII/Continual-NExT.git
 cd Continual-NExT
 pip install -e .
 ```
@@ -81,7 +86,10 @@ For more details, please refer to [supported models](https://swift.readthedocs.i
 
 ## Training and Evaluation
 ### Training
-  
+```shell
+export PYTHONPATH=$PYTHONPATH:peft
+```
+
 For training 'Reply' on Internlm2.5-7b
 ```shell
 sh scripts/train/internlm_train_reply.sh
