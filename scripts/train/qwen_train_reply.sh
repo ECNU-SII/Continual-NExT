@@ -1,5 +1,3 @@
-export PYTHONPATH=$PYTHONPATH:peft
-
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=0,1 swift sft --torch_dtype bfloat16 \
     --add_version False \
