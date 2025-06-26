@@ -238,6 +238,28 @@ $$\text{New Accuracy} = \frac{1}{T}\sum_{i=1}^{T}A_{i,i},$$
 
 where $T$ is the number of datasets, $A_{T,i}$ is the accuracy of $i$-th dataset on the model trained after $T$-th dataset, $A_{j,i}$ is the accuracy of $i$-th dataset on the model trained after $j$-th dataset, and $A_{i,i}$ is the accuracy of $i$-th dataset on the model trained after $i$-th dataset.
 
+## Supported dataset formats
+Messages format (standard format):
+```python
+{"messages": [{"role": "system", "content": "<system>"}, {"role": "user", "content": "<query1>"}, {"role": "assistant", "content": "<response1>"}, {"role": "user", "content": "<query2>"}, {"role": "assistant", "content": "<response2>"}]}
+```
+ShareGPT format:
+```python
+{"system": "<system>", "conversation": [{"human": "<query1>", "assistant": "<response1>"}, {"human": "<query2>", "assistant": "<response2>"}]}
+```
+
+Alpaca format:
+```python
+{"system": "<system>", "instruction": "<query-inst>", "input": "<query-input>", "output": "<response>"}
+```
+
+Query-Response format:
+```python
+{"system": "<system>", "query": "<query2>", "response": "<response2>", "history": [["<query1>", "<response1>"]]}
+```
+
+For more details, please refer to [swift datasets](https://swift.readthedocs.io/en/latest/Customization/Custom-dataset.html).
+
 ## Experimental Results
 
 We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), and five continual learning methods (namely Replay, LWF, EWC, GEM and CIA based on LoRA fine-tuning) on our proposed Continual-News dataset. Results are shown in the following two Tables.
