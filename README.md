@@ -34,6 +34,12 @@ cd Continual-NExT
 pip install -e .
 ```
 
+```shell
+pip install flash_attn
+```
+Notice:
+Considering that direct pip installation may cause exceptions, it is recommended to install flash-attn in an offline manner.
+
 Running Environment:
 
 |              | Range        | Recommended | Notes                                     |
