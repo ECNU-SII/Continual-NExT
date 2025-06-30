@@ -40,7 +40,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/gem/2023' \
-    --adapters ./output/internlm2/gem/2022/checkpoint-520 \
+    --adapters ./output/internlm2/gem/2022/checkpoint-560 \
     --GEM True \
     --GEM_memory_strength 0.5 \
     --GEM_replay_ratio 0.2 \
@@ -68,7 +68,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/gem/2024' \
-    --adapters ./output/internlm2/gem/2023/checkpoint-640 \
+    --adapters ./output/internlm2/gem/2023/checkpoint-560 \
     --GEM True \
     --GEM_memory_strength 0.5 \
     --GEM_replay_ratio 0.2 \
@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/gem/2025' \
-    --adapters ./output/internlm2/gem/2024/checkpoint-900 \
+    --adapters ./output/internlm2/gem/2024/checkpoint-720 \
     --GEM True \
     --GEM_memory_strength 0.5 \
     --GEM_replay_ratio 0.2 \
