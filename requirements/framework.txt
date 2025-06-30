@@ -7,7 +7,6 @@ charset_normalizer
 cpm_kernels
 dacite
 datasets>=3.0,<3.4
-deepspeed
 einops
 fastapi
 gradio>=3.40.0
@@ -37,4 +36,4 @@ transformers_stream_generator
 trl>=0.15,<0.20
 uvicorn
 zstandard
-deepspeed
+deepspeed<0.17
