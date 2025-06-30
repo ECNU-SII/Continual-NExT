@@ -43,7 +43,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/ewc/2023' \
-    --adapters ./output/internlm2/ewc/2022/checkpoint-520 \
+    --adapters ./output/internlm2/ewc/2022/checkpoint-560 \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
@@ -70,7 +70,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/ewc/2024' \
-    --adapters ./output/internlm2/ewc/2023/checkpoint-540 \
+    --adapters ./output/internlm2/ewc/2023/checkpoint-560 \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/internlm2/ewc/2025' \
-    --adapters ./output/internlm2/ewc/2024/checkpoint-680 \
+    --adapters ./output/internlm2/ewc/2024/checkpoint-720 \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
