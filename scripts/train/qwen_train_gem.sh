@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/qwen2_5/gem/2024' \
-    --resume_from_checkpoint ./output/qwen2_5/gem/2023/checkpoint-660 \
+    --resume_from_checkpoint ./output/qwen2_5/gem/2023/checkpoint-680 \
     --resume_only_model True \
     --GEM True \
     --GEM_memory_strength 0.5 \
