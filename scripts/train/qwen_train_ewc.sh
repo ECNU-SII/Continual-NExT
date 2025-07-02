@@ -43,7 +43,8 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/qwen2_5/ewc/2023' \
-    --adapters ./output/qwen2_5/ewc/2022/checkpoint-560 \
+    --resume_from_checkpoint ./output/qwen2_5/ewc/2022/checkpoint-560 \
+    --resume_only_model True \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
@@ -70,7 +71,8 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/qwen2_5/ewc/2024' \
-    --adapters ./output/qwen2_5/ewc/2023/checkpoint-560 \
+    --resume_from_checkpoint ./output/qwen2_5/ewc/2023/checkpoint-560 \
+    --resume_only_model True \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
@@ -97,7 +99,8 @@ CUDA_VISIBLE_DEVICES=0,1  swift sft --torch_dtype 'bfloat16' \
     --gradient_accumulation_steps '1' \
     --eval_steps '50' \
     --output_dir './output/qwen2_5/ewc/2025' \
-    --adapters ./output/qwen2_5/ewc/2024/checkpoint-720 \
+    --resume_from_checkpoint ./output/qwen2_5/ewc/2024/checkpoint-720 \
+    --resume_only_model True \
     --EWC True \
     --EWC_lambda 0.5 \
     --EWC_limit 200 \
