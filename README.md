@@ -61,7 +61,7 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 
 | Model  |                         Model size	        |       Template          |       HF Model ID   |
 | :----: | :------------------------------------------: | :---------------------: |:-----------------------: |
-| [Qwen/Qwen2.5](https://modelscope.cn/models/Qwen/Qwen2.5-7B)    | 0.5B/1.5B/3B/7B/14B/32B/72B | qwen2_5  | [Qwen/Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) |
+| [Qwen/Qwen2.5](https://modelscope.cn/models/Qwen/Qwen2.5-7B-Instruct)    | 0.5B/1.5B/3B/7B/14B/32B/72B | qwen2_5  | [Qwen/Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) |
 | [Shanghai_AI_Laboratory/internlm2_5](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 1.8B/7B/20B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
 | [baichuan-inc/Baichuan2](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B/13B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
 
