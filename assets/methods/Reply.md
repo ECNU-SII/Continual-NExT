@@ -1,4 +1,4 @@
-# Large Continual Instruction Assistant (CIA)
+# Experience Replay (Replay)
 
 ## Introduction
 
@@ -19,4 +19,5 @@ Experience Replay serves as a fundamental continual learning technique, primaril
   year={2019}
 }
 ```
+
 
