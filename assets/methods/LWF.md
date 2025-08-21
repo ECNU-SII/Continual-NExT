@@ -1,4 +1,4 @@
-# Large Continual Instruction Assistant (CIA)
+# Learning Without Forgetting (LWF)
 
 ## Introduction
 
@@ -23,4 +23,5 @@ Learning Without Forgetting (LWF) stands as a prominent continual learning metho
   publisher={IEEE}
 }
 ```
+
 
