@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Continual-NExT is a continual learning benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, multiple models, multiple tuning paradigms, and multiple continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
+Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
 
 In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets. In addition, we also provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs.
 
@@ -20,6 +20,8 @@ In summary, our benchmark includes the following advantages:
 **• Convenience:** Enables seamless usage with a one-command "plug-and-train" interface.
 
 **• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
+
+**• Scability:** Constructs the longest known multimodal continual instruction tuning benchmark: **Continual-NExT**, which contains 15 multimodal/pure-text datasets and provides comprehensive continual learning performance evaluation under **Long Term Training**.
 
 ## Installation
 ```shell
@@ -64,9 +66,11 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 | [Qwen/Qwen2.5](https://modelscope.cn/models/Qwen/Qwen2.5-7B-Instruct)    | 0.5B/1.5B/3B/7B/14B/32B/72B | qwen2_5  | [Qwen/Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) |
 | [Shanghai_AI_Laboratory/internlm2_5](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 1.8B/7B/20B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
 | [baichuan-inc/Baichuan2](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B/13B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
+| [S-Lab/LLaVA-7B]() | | | |
+| [DeepSeek/DeepSeek-VL]() | | | |
+| [Qwen/Qwen-VL]() | | | |
 
-
-For more details, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
+For more details and models, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
 
 ## Supported Peft Tuners
 
@@ -80,6 +84,8 @@ For more details, please refer to [supported models](https://swift.readthedocs.i
 |  Prefix-Tuning | [Prefix Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.00190](https://arxiv.org/abs/2101.00190) |
 |  P-Tuning | [P Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.10385](https://arxiv.org/abs/2103.10385) |
 
+For more details and pefts, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
+
 ## Supported Methods
 
 | Method |                         Description                          |                           Citation                           |
@@ -89,6 +95,8 @@ For more details, please refer to [supported models](https://swift.readthedocs.i
 |  GEM   | [Gradient Episodic Memory](./assets/methods/GEM.md) | [NeurIPS 2017](https://proceedings.neurips.cc/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf) |
 |  LWF   | [Learning Without Forgetting](./assets/methods/LWF.md) | [TPAMI 2017](https://ieeexplore.ieee.org/ielaam/34/8520726/8107520-aam.pdf) |
 | Reply  | [Experience Replay](./assets/methods/Reply.md) | [NeurIPS 2019](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
+
+Other methods are coming soon!
 
 ## Training and Evaluation
 ### Training
@@ -203,6 +211,13 @@ SWIFT originally supports distributed training by using DDP/FSDP/DeepSpeed. In o
 
 ## Evaluation Metrics
 
+We evaluate the performance by using Accuracy (ACC) metric. Accuracy are calculated according to specific downstrem tasks.
+
+### For Single-Choice Question
+
+### For Fill-Blank Question
+
+### For Long-Answer Question 
 Accuracy is obtained with the following steps:
 
 1. **Encoding with BERT**
@@ -266,7 +281,7 @@ For more details, please refer to [swift datasets](https://swift.readthedocs.io/
 
 ## Experimental Results
 
-We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), and five continual learning methods (namely Replay, LWF, EWC, GEM and CIA based on LoRA fine-tuning) on our proposed Continual-News dataset. Results are shown in the following two Tables.
+We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), and five continual learning methods (namely Replay, LWF, EWC, GEM and CIA based on LoRA fine-tuning) on our proposed **Continual-News** dataset. Results are shown in the following two Tables.
 
 **Continual-News Results on InternLM2.5-7b-chat**
 
@@ -278,8 +293,7 @@ We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), a
 |   LWF   | 72.25 | 63.53 | 80.18 | 100.00 |  78.99  |   27.59    |  99.58  |
 |   EWC   | 68.55 | 61.23 | 76.97 |  100   |  76.69  |   29.26    |  98.63  |
 |   GEM   | 76.19 | 71.52 | 87.83 |  100   |  83.89  |   19.32    |  98.38  |
-|   CIA   | 63.76 | 59.48 | 71.65 |  100   |  73.72  |   33.97    |  99.2   |
-
+|   CIA*  | 74.25 | 65.71 | 82.96 |  100   |  80.73  |   23.64    |  98.46   |
 
 
 **Continual-News Results on Qwen2.5-7b**
@@ -292,11 +306,17 @@ We implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), a
 |   LWF   | 73.79 | 65.31 | 81.93 | 99.94  |  80.24  |   24.51    |  98.62  |
 |   EWC   | 69.73 | 61.98 | 77.37 |  100   |  77.27  |   29.95    |  99.74  |
 |   GEM   | 75.82 | 72.03 | 88.67 |  100   |  84.13  |   21.04    |  99.91  |
-|   CIA   | 66.92 | 62.88 | 74.62 |  100   |  76.11  |   31.86    |   100   |
+|   CIA*  | 74.06 | 67.15 | 82.58 |  100   |  80.95  |   25.40    |   100   |
+
+CIA* denotes we adopt the CIA method without instruction grouping mechanism.
 
 Additionally, we also present a case (shown in the following Figure) that illustrates the continual knowledge update of LLMs.
 
 ![demo](assets/demo.png)
+
+In addition, we also implemented two parameter efficient fine-tunings (*i.e.* LoRA and MoELoRA), and six continual learning methods (namely Replay, LWF, EWC, GEM and CIA based on LoRA fine-tuning) on our proposed **Continual-NExT** benchmark (including 15 multimodal/pure text datasets, forming a **Long Term** order). Results are shown in the following Table.
+
+**Continual-News Results on LLaVA-7b**
 
 ## Acknowledgements
 
