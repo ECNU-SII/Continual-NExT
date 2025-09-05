@@ -85,7 +85,7 @@ For more details and models, please refer to [supported models](https://swift.re
 |  Prefix-Tuning | [Prefix Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.00190](https://arxiv.org/abs/2101.00190) |
 |  P-Tuning | [P Tuning](https://github.com/ECNU-SII/Continual-NExT/blob/main/README.md) | [https://arxiv.org/abs/2403.10385](https://arxiv.org/abs/2103.10385) |
 
-For more details and pefts, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
+For more details and pefts, please refer to [supported pefts](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
 
 ## Supported Methods
 
