@@ -22,7 +22,7 @@ In summary, our benchmark includes the following advantages:
 
 **• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
 
-**• Scability:** Constructs the longest known multimodal continual instruction tuning benchmark: **Continual-NExT**, which contains 15 multimodal/pure-text datasets and provides comprehensive continual learning performance evaluation under **Long Term Training**.
+**• Range:** Constructs the longest known multimodal continual instruction tuning benchmark: **Continual-NExT**, which contains 15 multimodal/pure-text datasets and provides comprehensive continual learning performance evaluation under **Long Term Training**.
 
 ## Installation
 ```shell
