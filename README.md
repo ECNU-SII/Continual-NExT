@@ -8,21 +8,35 @@
 
 ## Introduction
 
-Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
+🔥 Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
 
 In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets. In addition, we also provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs.
 
-In summary, our benchmark includes the following advantages:
+📄 In summary, our benchmark includes the following advantages:
 
-**• Scalability:** Easily scales to accommodate multiple large language models (LLMs), large multimodal models (LMMs), parameter-efficient fine-tuners, and diverse datasets.
+**🚀 Scalability:** Easily scales to accommodate multiple large language models (LLMs), large multimodal models (LMMs), parameter-efficient fine-tuners, and diverse datasets.
 
-**• Flexibility:** Supports the flexible combination of diverse model architectures, parameter-efficient fine-tuning paradigms, and anti-forgetting methods.
+**🚀 Flexibility:** Supports the flexible combination of diverse model architectures, parameter-efficient fine-tuning paradigms, and anti-forgetting methods.
 
-**• Convenience:** Enables seamless usage with a one-command "plug-and-train" interface.
+**🚀 Convenience:** Enables seamless usage with a one-command "plug-and-train" interface.
 
-**• Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
+**🚀 Extensibility:** Provides strong support and adaption of novel anti-forgetting methods.
 
-**• Range:** Constructs the longest known multimodal continual instruction tuning benchmark: **Continual-NExT**, which contains 15 multimodal/pure-text datasets and provides comprehensive continual learning performance evaluation under **Long Term Training**.
+**🚀 Long-Range:** Constructs the longest known multimodal continual instruction tuning benchmark: **Continual-NExT**, which contains 15 multimodal/pure-text datasets and provides comprehensive continual learning performance evaluation under **Long Term Training**.
+
+## Contents
+
+- [Installation](#Installation)
+- [Supported Models](#Supported Models)
+- [Supported Peft Tuners](#Supported Peft Tuners)
+- [Supported Methods](#Supported Methods)
+- [Dataset](#Dataset)
+- [Training and Evaluation](#Training and Evaluation)
+- [Evaluation Metrics](#Evaluation Metrics)
+- [Supported Dataset Formats](#Supported Dataset Formats)
+- [Experimental Results](#Experimental Results)
+- [Ackonwledgements](#Ackonwledgements)
+- [Future Plans](#Future Plans)
 
 ## Installation
 ```shell
