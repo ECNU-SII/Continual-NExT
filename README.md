@@ -4,7 +4,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ecnu-sii/Continual-NExT)](https://github.com/ecnu-sii/Continual-NExT/commits/main)
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/SII-ECNU/Continual-News)
-[![MM Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/SII-ECNU/Continual-NexT)
+[![MM Datasets](https://img.shields.io/badge/🤗-MM%20Datasets-blue)](https://huggingface.co/datasets/SII-ECNU/Continual-NexT)
 
 ## Introduction
 
