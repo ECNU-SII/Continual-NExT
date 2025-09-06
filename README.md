@@ -4,15 +4,15 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ecnu-sii/Continual-NExT)](https://github.com/ecnu-sii/Continual-NExT/commits/main)
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-News)
-[![MM Datasets](https://img.shields.io/badge/🤗-MM%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
+[![NexT Datasets](https://img.shields.io/badge/🤗-NexT%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
 
 ## Introduction
 
 🔥 Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing and testing new methods to solve **the trade-off between stability and plasticity** in LFMs.
 
-In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets, the formation of annotation json please kindly refer to **Supported Dataset Formats**. Specifically, we provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs. A longest known multimodal continual instruction tuning benchmark: **Continual-NExT** is proposed for further validation of the continual learning ability in multimodal instruction following.
+⚙️ In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets, the formation of annotation json please kindly refer to **Supported Dataset Formats**. Specifically, we provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs. A longest known multimodal continual instruction tuning benchmark: **Continual-NExT** is proposed for further validation of the continual learning ability in multimodal instruction following.
 
-📄 In summary, our benchmark includes the following advantages:
+📄 In summary, our toolkit and benchmark includes the following advantages:
 
 **🚀 Scalability:** Easily scales to accommodate multiple large language models (LLMs), large multimodal models (LMMs), parameter-efficient fine-tuners, and diverse datasets.
 
@@ -39,23 +39,24 @@ In addition to using the datasets supported by the ms-swift framework, Continual
 - [Future Plans](#Future-Plans)
 
 ## Installation
+1. Create Conda Environment:
 ```shell
 conda create -n continual python==3.10
 conda activate continual
 ```
 
-To install from source:
+2. Install From Source:
 ```shell
 git clone https://github.com/ECNU-SII/Continual-NExT.git
 cd Continual-NExT
 pip install -e .
 ```
 
+3. Install Flash Attention Package:
 ```shell
 pip install flash_attn
 ```
-Notice:
-Considering that direct pip installation may cause exceptions, it is recommended to install flash-attn in an offline manner.
+**Notice:** Considering that direct pip installation may cause exceptions, it is recommended to install flash-attn in an offline manner.
 
 Running Environment:
 
@@ -71,7 +72,6 @@ Running Environment:
 | vllm         | >=0.5.1      | 0.8.5.post1       | Inference/Deployment/Evaluation           |
 | lmdeploy     | >=0.5        | 0.8       | Inference/Deployment/Evaluation           |
 
-
 For more optional dependencies, you can refer to [here](https://github.com/modelscope/ms-swift/blob/main/requirements/install_all.sh).
 
 ## Supported Models
@@ -81,9 +81,9 @@ For more optional dependencies, you can refer to [here](https://github.com/model
 | [Qwen/Qwen2.5](https://modelscope.cn/models/Qwen/Qwen2.5-7B-Instruct)    | 0.5B/1.5B/3B/7B/14B/32B/72B | qwen2_5  | [Qwen/Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) |
 | [Shanghai_AI_Laboratory/internlm2_5](https://modelscope.cn/models/Shanghai_AI_Laboratory/internlm2_5-7b-chat) | 1.8B/7B/20B | internlm2 | [Shanghai_AI_Laboratory/internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat) |
 | [baichuan-inc/Baichuan2](https://modelscope.cn/models/baichuan-inc/Baichuan2-7B-Chat) | 7B/13B | baichuan |[baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
-| [S-Lab/LLaVA]() | | | |
-| [DeepSeek/DeepSeek-VL]() | | | |
-| [Qwen/Qwen-VL]() | | | |
+| [S-Lab/LLaVA](https://modelscope.cn/models/llava-hf/llava-1.5-7b-hf) | 7B/13B | llava_v1 |[llava-hf/llava-1.5-7b-hf](https://huggingface.co/llava-hf/llava-1.5-7b-hf)|
+| [DeepSeek/DeepSeek-VL](https://modelscope.cn/models/deepseek-ai/deepseek-vl-7b-chat) | 1.3B/7B | deepseek |[deepseek-ai/deepseek-vl-7b-chat](https://huggingface.co/deepseek-ai/deepseek-vl-7b-chat)|
+| [Qwen/Qwen-VL](https://modelscope.cn/models/Qwen/Qwen2.5-VL-7B-Instruct) | 3B/7B | qwen2_5 |[Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)|
 
 For more details and models, please refer to [supported models](https://swift.readthedocs.io/en/latest/Instruction/Supported-models-and-datasets.html).
 
@@ -112,6 +112,12 @@ For more details and pefts, please refer to [supported pefts](https://swift.read
 | Reply  | [Experience Replay](./assets/methods/Reply.md) | [NeurIPS 2019](https://proceedings.neurips.cc/paper_files/paper/2019/file/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Paper.pdf) |
 
 Other methods are coming soon!
+
+## Dataset
+
+### Continual-News
+
+### Continual-NeXT
 
 ## Training and Evaluation
 ### Training
@@ -162,7 +168,7 @@ Please note that the implementation of LWF in Qwen does not support flash_attn.
 
 
 ### Evaluation
-To calculate the performance metrics of the model results, we first need to deploy the model as a background service to ensure continuous operation. Here's a sample: Use the final model trained on 2025 data to test 2022 data:  
+To calculate the performance metrics of the model results, we first need to deploy the model as a background service to ensure cantinual operation. Here's a sample on Continual-News benchmark: Use the final model trained on 2025 data to test 2022 data:  
 
 
 #### 1. Deploy the model service in the background  
@@ -198,7 +204,7 @@ python evaluation/sim.py
   Ensure to update the corresponding files and model paths in `deploy.sh`, `test_ans.py`, and `sim.py` to match your environment.  
 
 
-This approach allows the service to run continuously in the background while you execute evaluation scripts in a separate terminal, ensuring non-blocking workflow execution.
+This approach allows the service to run continually in the background while you execute evaluation scripts in a separate terminal, ensuring non-blocking workflow execution.
 
 ### Distributed Training
 
@@ -229,8 +235,10 @@ SWIFT originally supports distributed training by using DDP/FSDP/DeepSpeed. In o
 We evaluate the performance by using Accuracy (ACC) metric. Accuracy are calculated according to specific downstrem tasks.
 
 ### For Single-Choice Question
+Accuracy is obtained by judging whether Answer of LMMs equals to Ground Truth.
 
 ### For Fill-Blank Question
+Accuracy is obtained by judging whether Answer of LMMs equals to Ground Truth or whether Ground Truth is concluded in Answer of LMMs.
 
 ### For Long-Answer Question 
 Accuracy is obtained with the following steps:
@@ -333,6 +341,36 @@ In addition, we also implemented two parameter efficient fine-tunings (*i.e.* Lo
 
 **Continual-News Results on LLaVA-7b**
 
+|  Method  | ArxivQA | GeoChat | IconQA | ClevrMath | CodeQA | ImageNet | Flickr30k |
+| :------: | :-----: | :-----: | :----: | :-------: | :----: | :------: | :-------: |
+| Pretrain |  36.99  |  67.67  | 18.77  |   20.27   |  0.26  |   18.1   |   17.27   |
+|   LoRA   |  53.99  |  92.23  | 47.23  |   44.86   |  4.36  |  67.84   |   17.16   |
+|   EWC    |  55.16  |  91.73  | 47.17  |   49.3    |  4.38  |  82.03   |   16.71   |
+|   GEM    |  55.3   |  91.03  | 49.13  |   48.3    |  4.76  |   76.2   |   16.21   |
+|   LWF    |  51.04  |  87.33  | 30.97  |   39.2    |  4.74  |  84.89   |   16.26   |
+|  Replay  |  54.85  |  94.4   | 51.73  |   40.07   |  4.48  |  94.61   |   9.36    |
+| MoELoRA  |   56    |  91.36  | 48.76  |   48.9    |  3.82  |  82.19   |   17.77   |
+
+| DocVQA | TextVQA | MathQA | ChartQA | PathVQA | Grounding | ScienceQA | WikiQA |
+| :----: | :-----: | :----: | :-----: | :-----: | :-------: | :-------: | :----: |
+| 14.58  |  57.39  |  0.44  |   9.6   |  33.29  |   28.28   |   66.19   | 17.54  |
+| 16.47  |  47.7   |  33.8  |  18.04  |  50.98  |   69.52   |   89.46   | 22.27  |
+| 16.88  |  51.73  | 35.41  |   19    |  50.92  |   69.92   |   89.51   | 24.17  |
+| 15.85  |  51.33  | 35.28  |  17.68  |  51.38  |   67.23   |   89.86   | 23.85  |
+| 16.56  |  54.09  | 30.05  |  18.64  |  52.79  |   64.11   |   87.95   | 24.96  |
+| 14.65  |  54.7   | 31.42  |  14.4   |  49.64  |   56.98   |   85.62   | 23.85  |
+| 16.33  |  59.51  | 34.17  |  18.52  |  49.04  |   67.65   |   88.28   | 22.59  |
+
+| Avg.ACC | Forgetting | New.ACC |
+| :-----: | :--------: | :-----: |
+|  27.11  |     -      |    -    |
+|  45.06  |   11.62    |  55.91  |
+|  46.93  |    9.72    |  56.01  |
+|  46.23  |   10.19    |  55.74  |
+|  44.24  |   12.29    |  55.70  |
+|  45.38  |   11.41    |  56.03  |
+|  46.99  |    8.06    |  54.51  |
+
 ## Acknowledgements
 
 Continual-NExT is built upon the [SWIFT](https://github.com/modelscope/ms-swift), an excellent open-source framework developed by the ModelScope team. We extend our sincere gratitude for their outstanding contributions. SWIFT’s flexible and modular architecture has been instrumental in enabling the development of continual learning systems: Continual-NExT.
@@ -341,6 +379,6 @@ Before using Continual-NExT, we highly recommend familiarizing yourself with SWI
 
 ## Future Plans
 
-• We will publish a complex and hard continual tuning/evolution benchmark for **multimodal understanding** **MLLMs** with various architecture, PEFT and continual learning method.
+• ~~We will publish a complex and hard continual tuning/evolution benchmark for **multimodal understanding** **MLLMs** with various architecture, PEFT and continual learning method.~~
 
 • We will publish a novel and challenge continual tuning/evolution benchmark for **Any-to-Any MLLMs** with various architecture, PEFT and continual learning method.
