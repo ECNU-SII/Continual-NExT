@@ -117,7 +117,17 @@ Other methods are coming soon!
 
 ### Continual-News
 
+We introduce a purely Chinese text benchmark, which is constructed by collecting important current affairs news according to distinct months and years. The entire benchmark is divided into four datasets, corresponding to the years 2022, 2023, 2024, and 2025. For the datasets from 2022 to 2024, major news events from whole year are collected. The 2025 dataset, however, contains only significant news from the first half of the year. The datasets are structured as multi-turn conversational form (QA pairs). The number of news in each dataset is presented in the following table.
+
+| Dataset  | 2022 | 2023 | 2024 | 2025 |
+| -------- | ---- | ---- | ---- | ---- |
+| QA Pairs | 1408 | 1246 | 1073 | 220  |
+
+The model is continually trained in succession on the datasets of 2022, 2023, 2024, and 2025. The model is further evaluated by recomputing the accuracy on each respective trained dataset based on the model weights obtained in the final dataset of training.
+
 ### Continual-NeXT
+
+We introduce the longest known multimodal continual instruction tuning benchmark to date, comprising a total of 15 multimodal and pure-text datasets, nearly double the number utilized in comparable studies. Specifically, the benchmark includes the following datasets: ArXivQA, GeoChat, IconQA, ClevrMath, CodeQA, ImageNet, Flickr30k, DocVQA, TextVQA, MathQA, ChartQA, PathVQA, Grounding, ScienceQA, and WikiQA. To facilitate benchmark unification, we reproduce the annotations for all datasets, standardize the training tasks into a consistent question-answering format, and design distinct instruction templates tailored to each dataset, thereby enabling efficient continual instruction tuning. Notably, the proposed benchmark is the most extensive of its kind, encompassing both pure-text and multimodal inputs. Furthermore, the included datasets span a wide range of domains and represent various distinct tasks, including image classification, code generation, remote sensing recognition, optical character recognition (OCR), visual grounding, and others. Consequently, this benchmark provides a comprehensive and rigorous platform for evaluating the effectiveness of diverse continual learning methods across different modeling paradigms.
 
 ## Training and Evaluation
 ### Training
