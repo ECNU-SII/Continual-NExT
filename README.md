@@ -123,7 +123,7 @@ We introduce a purely Chinese text benchmark, which is constructed by collecting
 | -------- | ---- | ---- | ---- | ---- |
 | QA Pairs | 1408 | 1246 | 1073 | 220  |
 
-The model is continually trained in succession on the datasets of 2022, 2023, 2024, and 2025. The model is further evaluated by recomputing the accuracy on each respective trained dataset based on the model weights obtained in the final dataset of training.
+The model is continually trained in the order of 2022, 2023, 2024, and 2025. The model is further evaluated by recomputing the accuracy on each respective trained dataset based on the model weights obtained in the final dataset of training.
 
 ### Continual-NeXT
 
@@ -137,7 +137,7 @@ We introduce the longest known multimodal continual instruction tuning benchmark
 | -------- | -------- | ------ | ------ | ------ | ------- | ------ | ---------- |
 | QA Pairs | 135K     | 33K    | 29K    | 40K    | 33K     | 31K    | 43K        |
 
-The model is continually trained in succession on the datasets of ArXivQA, GeoChat, IconQA, ClevrMath, CodeQA, ImageNet, Flickr30k, DocVQA, TextVQA, MathQA, ChartQA, PathVQA, Grounding, ScienceQA, and WikiQA. The model is further evaluated by recomputing the accuracy on each respective trained dataset based on the model weights obtained in the final dataset of training.
+The model is continually trained in the order of ArXivQA, GeoChat, IconQA, ClevrMath, CodeQA, ImageNet, Flickr30k, DocVQA, TextVQA, MathQA, ChartQA, PathVQA, Grounding, ScienceQA, and WikiQA. The model is further evaluated by recomputing the accuracy on each respective trained dataset based on the model weights obtained in the final dataset of training.
 
 ## Training and Evaluation
 ### Training
