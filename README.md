@@ -35,7 +35,7 @@ In addition to using the datasets supported by the ms-swift framework, Continual
 - [Evaluation Metrics](#Evaluation_Metrics)
 - [Supported Dataset Formats](#Supported_Dataset_Formats)
 - [Experimental Results](#Experimental_Results)
-- [Ackonwledgements](#Ackonwledgements)
+- [Acknowledgements](#Acknowledgements)
 - [Future Plans](#Future_Plans)
 
 ## Installation
