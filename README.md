@@ -3,14 +3,14 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ecnu-sii/Continual-NExT?style=social)](https://github.com/ecnu-sii/Continual-NExT/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ecnu-sii/Continual-NExT)](https://github.com/ecnu-sii/Continual-NExT/commits/main)
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
-[![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/SII-ECNU/Continual-News)
-[![MM Datasets](https://img.shields.io/badge/🤗-MM%20Datasets-blue)](https://huggingface.co/datasets/SII-ECNU/Continual-NexT)
+[![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-News)
+[![MM Datasets](https://img.shields.io/badge/🤗-MM%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
 
 ## Introduction
 
-🔥 Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing new methods to solve **the trade-off between stability and plasticity** in LFMs.
+🔥 Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing and testing new methods to solve **the trade-off between stability and plasticity** in LFMs.
 
-In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets. In addition, we also provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs.
+In addition to using the datasets supported by the ms-swift framework, Continual-NExT also supports interfaces for continual fine-tuning of public and private datasets, the formation of annotation json please kindly refer to **Supported Dataset Formats**. Specifically, we provide a new open-source dataset based on Large Language Models (LLMs), **Continual-News Knowledge Evolution** to help researchers better understand the continual evolution process of LLMs. A longest known multimodal continual instruction tuning benchmark: **Continual-NExT** is proposed for further validation of the continual learning ability in multimodal instruction following.
 
 📄 In summary, our benchmark includes the following advantages:
 
@@ -27,16 +27,16 @@ In addition to using the datasets supported by the ms-swift framework, Continual
 ## Contents
 
 - [Installation](#Installation)
-- [Supported Models](#Supported Models)
-- [Supported Peft Tuners](#Supported Peft Tuners)
-- [Supported Methods](#Supported Methods)
+- [Supported Models](#Supported_Models)
+- [Supported Peft Tuners](#Supported_Peft_Tuners)
+- [Supported Methods](#Supported_Methods)
 - [Dataset](#Dataset)
-- [Training and Evaluation](#Training and Evaluation)
-- [Evaluation Metrics](#Evaluation Metrics)
-- [Supported Dataset Formats](#Supported Dataset Formats)
-- [Experimental Results](#Experimental Results)
+- [Training and Evaluation](#Training_and_Evaluation)
+- [Evaluation Metrics](#Evaluation_Metrics)
+- [Supported Dataset Formats](#Supported_Dataset_Formats)
+- [Experimental Results](#Experimental_Results)
 - [Ackonwledgements](#Ackonwledgements)
-- [Future Plans](#Future Plans)
+- [Future Plans](#Future_Plans)
 
 ## Installation
 ```shell
