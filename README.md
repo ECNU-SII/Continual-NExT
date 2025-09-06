@@ -27,16 +27,16 @@ In addition to using the datasets supported by the ms-swift framework, Continual
 ## Contents
 
 - [Installation](#Installation)
-- [Supported Models](#Supported_Models)
-- [Supported Peft Tuners](#Supported_Peft_Tuners)
-- [Supported Methods](#Supported_Methods)
+- [Supported Models](#Supported-Models)
+- [Supported Peft Tuners](#Supported-Peft-Tuners)
+- [Supported Methods](#Supported-Methods)
 - [Dataset](#Dataset)
-- [Training and Evaluation](#Training_and_Evaluation)
-- [Evaluation Metrics](#Evaluation_Metrics)
-- [Supported Dataset Formats](#Supported_Dataset_Formats)
-- [Experimental Results](#Experimental_Results)
+- [Training and Evaluation](#Training-and-Evaluation)
+- [Evaluation Metrics](#Evaluation-Metrics)
+- [Supported Dataset Formats](#Supported-Dataset-Formats)
+- [Experimental Results](#Experimental-Results)
 - [Acknowledgements](#Acknowledgements)
-- [Future Plans](#Future_Plans)
+- [Future Plans](#Future-Plans)
 
 ## Installation
 ```shell
