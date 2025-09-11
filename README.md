@@ -402,3 +402,16 @@ Before using Continual-NExT, we highly recommend familiarizing yourself with SWI
 • ~~We will publish a complex and hard continual tuning/evolution benchmark for **multimodal understanding** **MLLMs** with various architecture, PEFT and continual learning method.~~
 
 • We will publish a novel and challenge continual tuning/evolution benchmark for **Any-to-Any MLLMs** with various architecture, PEFT and continual learning method.
+
+## Citation
+
+If you use Continual-NExT in your research, please consider citing:
+
+```bibtex
+@misc{ContinualNExT,
+  author = {Jingyang Qiao, Weicheng Meng, Qingsong Hu, Jie Jin, Jingyu Gong, Xin Tan, Zhizhong Zhang, Yuan Xie},
+  title = {Continual-NExT: A Toolbox of Multimodal Continual Instruction Tuning},
+  month = {August},
+  year = {2025},
+  url = {https://github.com/ECNU-SII/Continual-NExT}
+}
