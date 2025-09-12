@@ -409,7 +409,7 @@ If you use Continual-NExT in your research, please consider citing:
 
 ```bibtex
 @misc{ContinualNExT,
-  author = {Jingyang Qiao, Weicheng Meng, Qingsong Hu, Jie Jin, Zhizhong Zhang, Xin Tan, Jingyu Gong, Yuan Xie},
+  author = {Qiao, Jingyang and Meng, Weicheng and Hu, Qingsong and Jin, Jie and Zhang, Zhizhong and Tan, Xin and Gong, Jingyu and Xie, Yuan},
   title = {Continual-NExT: A Toolbox of Multimodal Continual Instruction Tuning},
   month = {August},
   year = {2025},
