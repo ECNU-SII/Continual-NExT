@@ -26,17 +26,32 @@
 
 ## Contents
 
-- [Installation](#Installation)
-- [Supported Models](#Supported-Models)
-- [Supported Peft Tuners](#Supported-Peft-Tuners)
-- [Supported Methods](#Supported-Methods)
-- [Dataset](#Dataset)
-- [Training and Evaluation](#Training-and-Evaluation)
-- [Evaluation Metrics](#Evaluation-Metrics)
-- [Supported Dataset Formats](#Supported-Dataset-Formats)
-- [Experimental Results](#Experimental-Results)
-- [Acknowledgements](#Acknowledgements)
-- [Future Plans](#Future-Plans)
+- [Introduction](#introduction)
+- [Contents](#contents)
+- [Installation](#installation)
+- [Supported Models](#supported-models)
+- [Supported Peft Tuners](#supported-peft-tuners)
+- [Supported Methods](#supported-methods)
+- [Dataset](#dataset)
+  - [Continual-News](#continual-news)
+  - [Continual-NeXT](#continual-next)
+- [Training and Evaluation](#training-and-evaluation)
+  - [Training](#training)
+  - [Evaluation](#evaluation)
+    - [1. Deploy the model service in the background](#1-deploy-the-model-service-in-the-background)
+    - [2. Execute subsequent scripts in a new terminal](#2-execute-subsequent-scripts-in-a-new-terminal)
+    - [3. Key considerations](#3-key-considerations)
+  - [Distributed Training](#distributed-training)
+- [Evaluation Metrics](#evaluation-metrics)
+  - [For Single-Choice Question](#for-single-choice-question)
+  - [For Fill-Blank Question](#for-fill-blank-question)
+  - [For Long-Answer Question](#for-long-answer-question)
+- [Supported dataset formats](#supported-dataset-formats)
+- [Experimental Results](#experimental-results)
+- [Affliations](#affliations)
+- [Acknowledgements](#acknowledgements)
+- [Future Plans](#future-plans)
+- [Citation](#citation)
 
 ## Installation
 1. Create Conda Environment:
@@ -390,6 +405,10 @@ In addition, we also implemented two parameter efficient fine-tunings (*i.e.* Lo
 |  44.24  |   12.29    |  55.70  |
 |  45.38  |   11.41    |  56.03  |
 |  46.99  |    8.06    |  54.51  |
+
+## Affliations
+1. Shanghai Innovation Institute
+2. East China Normal University
 
 ## Acknowledgements
 
