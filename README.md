@@ -6,7 +6,6 @@
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-News)
 [![NexT Datasets](https://img.shields.io/badge/🤗-NexT%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
 
-[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 
 ## Introduction
 
@@ -436,3 +435,6 @@ If you use Continual-NExT in your research, please consider citing:
   year = {2025},
   url = {https://github.com/ECNU-SII/Continual-NExT}
 }
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
