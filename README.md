@@ -5,7 +5,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-News)
 [![NexT Datasets](https://img.shields.io/badge/🤗-NexT%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
-
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 ## Introduction
 
 🔥 Continual-NExT is a continual learning toolkit and benchmark for **Large Foundation Modals (LFMs)** developed based on the ms-swift framework, focusing on the catastrophic forgetting of LFMs in the process of continual evolution. It integrates multiple modalities, models, tuning paradigms, and continual learning (CL) methods, allowing researchers to freely combine these components in developing and testing new methods to solve **the trade-off between stability and plasticity** in LFMs.
