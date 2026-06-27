@@ -5,7 +5,8 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/ecnu-sii/Continual-NExT?color=orange)](https://github.com/ecnu-sii/Continual-NExT/graphs/contributors)
 [![News Datasets](https://img.shields.io/badge/🤗-News%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-News)
 [![NexT Datasets](https://img.shields.io/badge/🤗-NexT%20Datasets-blue)](https://huggingface.co/datasets/ECNU-SII/Continual-NexT)
-[![Powered by DartNode](assets/color_white_icon.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 
 ## Introduction
 
